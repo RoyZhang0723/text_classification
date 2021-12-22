@@ -1,16 +1,31 @@
-# This is a sample Python script.
+from transformers import BertTokenizer, BertModel, BertForMaskedLM
+import csv
+import pandas as pd
+import os
+dfs = []
+files = os.walk(r"NLP_data")
+for path, dir_list, file_list in files:
+    for file_name in file_list:
+        print(os.path.join(path, file_name))
+        dfs.append(pd.read_csv(os.path.join(path, file_name), delimiter="\t"))
+contractorAB1 = dfs[0]['AB']
+mediaAB = dfs[1]['AB']
+greenGroupAB = dfs[2]['AB']
+governmentAB = dfs[3]['AB']
+subContractorAB = dfs[4]['AB']
+politicalPartyAb = dfs[5]['AB']
+NGOAB = dfs[6]['AB']
+workerAB = dfs[7]['AB']
+consultantAB = dfs[8]['AB']
+surveyorAB = dfs[9]['AB']
+environmentalGroupAB = dfs[10]['AB']
+communityAB = dfs[11]['AB']
+residentAB = dfs[12]['AB']
+designerAB = dfs[13]['AB']
+contractorAB2 = dfs[14]['AB']
+contractorAB = pd.concat([contractorAB1, contractorAB2], axis=0)
+print(contractorAB)
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# csvFile = 'NLP_data/Community.csv'
+# df = pd.read_csv(csvFile, delimiter="\t")
+# print(df['AB'])
