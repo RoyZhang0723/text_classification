@@ -1,5 +1,4 @@
 import nltk
-import tensorflow_text as text
 import pandas as pd
 import numpy as np
 import tensorflow as tf
