@@ -26,6 +26,21 @@ designerAB = dfs[13]['ID']
 contractorAB2 = dfs[14]['ID']
 contractorAB = pd.concat([contractorAB1, contractorAB2], axis=0)
 
+print("1 media:", len(mediaAB))
+print("2 green group:", len(greenGroupAB))
+print("3 government:", len(governmentAB))
+print("4 subcontractor:", len(subContractorAB))
+print("5 political party:", len(politicalPartyAb))
+print("6 NGO", len(NGOAB))
+print("7 worker", len(workerAB))
+print("8 consultant", len(consultantAB))
+print("9 surveyor", len(surveyorAB))
+print("10 environmental group", len(environmentalGroupAB))
+print("11 community", len(communityAB))
+print("12 resident", len(residentAB))
+print("13 designer", len(designerAB))
+print("14 contractor", len(contractorAB))
+
 rows = []
 # media:1 , green group:2 , government:3 , subcontractor:4 , political party:5 , NGO:6
 # worker:7 , consultant:8 , surveyor:9 , environmental group:10 , community:11 , resident:12
